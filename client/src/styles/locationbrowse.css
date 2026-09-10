@@ -1,0 +1,207 @@
+/* Location Browse Styles */
+.location-browse {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.loader {
+  font-size: 18px;
+  color: #666;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.location-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.location-header h1 {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+}
+
+.location-header p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.locations-section {
+  margin-bottom: 40px;
+}
+
+.locations-section h2 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.location-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.location-card:hover {
+  border-color: #4a90e2;
+  box-shadow: 0 8px 16px rgba(74, 144, 226, 0.15);
+  transform: translateY(-4px);
+}
+
+.location-card.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.location-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.location-card .state {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.location-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.stat {
+  display: inline-block;
+}
+
+.selected-location-section {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.location-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.location-detail-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #1a1a1a;
+}
+
+.location-detail-info {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.location-coordinates {
+  font-size: 14px;
+  color: #666;
+  background: #f8f8f8;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
+.jobs-list {
+  animation: fadeIn 0.3s ease;
+}
+
+.no-jobs {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-jobs p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.no-jobs p:first-child {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .location-browse {
+    padding: 16px;
+  }
+
+  .location-header h1 {
+    font-size: 24px;
+  }
+
+  .locations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .location-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .selected-location-section {
+    padding: 20px;
+  }
+
+  .location-detail-header h2 {
+    font-size: 20px;
+  }
+}
